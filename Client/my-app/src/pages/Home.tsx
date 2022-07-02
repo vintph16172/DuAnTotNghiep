@@ -18,7 +18,7 @@ const Home = (props: Props) => {
     <div>Home
       <HeaderComponent></HeaderComponent>
       <Test />
-      {/* <div style={{ margin: "auto", width: "400px", background: "#4DAE51", borderRadius: "8px", padding: "15px" }}>
+      <div style={{ margin: "auto", width: "400px", background: "#4DAE51", borderRadius: "8px", padding: "15px" }}>
         <h3>My Profile</h3>
         <p>ID: {localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).id : ""}</p>
         <p>Name: {localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).name : ""}</p>
@@ -26,7 +26,7 @@ const Home = (props: Props) => {
         <p> <img src={localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).image : ""} alt="" width={120} /></p>
 
         <Button onClick={() => logout()}>Logout</Button>
-      </div> */}
+      </div>
       <Footer></Footer>
     </div>
   )
