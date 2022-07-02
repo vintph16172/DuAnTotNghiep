@@ -3,6 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../component/Footer'
 import HeaderComponent from '../component/Header'
+import Test from '../component/Test'
 import { logOut } from '../firebase/config'
 
 type Props = {}
@@ -15,16 +16,17 @@ const Home = (props: Props) => {
   }
   return (
     <div>Home
-        <HeaderComponent></HeaderComponent>
-      <div  style={{margin:"auto", width:"400px", background:"#4DAE51", borderRadius:"8px", padding:"15px"}}>
-          <h3>My Profile</h3>
-            <p>ID: {localStorage.getItem("user")? JSON.parse(localStorage.getItem("user") as string).id : ""}</p>
-            <p>Name: {localStorage.getItem("user")  ? JSON.parse(localStorage.getItem("user") as string).name: ""}</p>
-            <p>Email: {localStorage.getItem("user")  ? JSON.parse(localStorage.getItem("user") as string).email : ""}</p>
-            <p> <img src={localStorage.getItem("user")  ? JSON.parse(localStorage.getItem("user") as string).image : ""} alt="" width={120} /></p>
-           
-            <Button  onClick={() => logout()}>Logout</Button>
-      </div>
+      <HeaderComponent></HeaderComponent>
+      <Test />
+      {/* <div style={{ margin: "auto", width: "400px", background: "#4DAE51", borderRadius: "8px", padding: "15px" }}>
+        <h3>My Profile</h3>
+        <p>ID: {localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).id : ""}</p>
+        <p>Name: {localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).name : ""}</p>
+        <p>Email: {localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).email : ""}</p>
+        <p> <img src={localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") as string).image : ""} alt="" width={120} /></p>
+
+        <Button onClick={() => logout()}>Logout</Button>
+      </div> */}
       <Footer></Footer>
     </div>
   )
